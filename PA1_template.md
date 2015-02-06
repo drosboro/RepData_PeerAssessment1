@@ -38,7 +38,7 @@ We next generate a histogram of the total steps per day over the 61 days.
 hist(daily_totals$total, breaks=10, main="Histogram of total steps per day", xlab="Total steps per day")
 ```
 
-![](analysis_files/figure-html/unnamed-chunk-4-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
 
 The mean and median number of steps are calculated below:
 
@@ -70,7 +70,7 @@ interval_summary <- summarise(interval_data, meansteps = mean(steps, na.rm=TRUE)
 plot(interval_summary$interval, interval_summary$meansteps, type="l")
 ```
 
-![](analysis_files/figure-html/unnamed-chunk-6-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
 
 Next, we will find the time interval with the maximum mean number of steps:
 
@@ -118,7 +118,7 @@ daily_totals <- summarise(daily, total = sum(steps, na.rm=TRUE))
 hist(daily_totals$total, breaks=10, main="Histogram of total steps per day", xlab="Total steps per day")
 ```
 
-![](analysis_files/figure-html/unnamed-chunk-10-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
 ```r
 mean(daily_totals$total)
@@ -159,6 +159,6 @@ interval_summary <- summarise(interval_data, meansteps=mean(steps))
 xyplot(interval_summary$meansteps ~ interval_summary$interval | interval_summary$daytype, type="l", layout = c(1, 2), xlab="Interval", ylab="Number of Steps")
 ```
 
-![](analysis_files/figure-html/unnamed-chunk-12-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
 
 As you can see, while the weekday has most activity concentrated earlier in the morning, the activity is more spread out on weekends.  It would also seem that on weekends, fewer steps are taken first thing in the morning, perhaps indicating a later time for getting out of bed.
